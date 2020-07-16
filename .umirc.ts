@@ -4,7 +4,6 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none'
   },
-  routes: [{ path: '/', component: '@/pages/home' }],
   antd: {
     dark: false
   },
@@ -24,5 +23,5 @@ export default defineConfig({
     baseNavigator: true
   },
   // theme: { 'primary-color': '#FFFFFF' },
-  title: false
+  title: 'ReactAppTemplate'
 });

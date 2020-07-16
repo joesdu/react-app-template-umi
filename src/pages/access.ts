@@ -1,0 +1,15 @@
+// src/access.ts
+// 这个文件用于权限管理,属于约定文件,不可随便更改文件名.
+interface AccessState {
+  canAdmin: boolean;
+}
+
+const access = (initialState: { access?: any }): AccessState => {
+  const { access } = initialState || {};
+
+  return {
+    canAdmin: access?.findIndex((x: { menuId: number }) => x.menuId === 1)! > -1
+  };
+};
+
+export default access;

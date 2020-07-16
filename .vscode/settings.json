@@ -1,17 +1,25 @@
 {
-    "cSpell.words": [
-        "antd",
-        "endregion",
-        "esbuild",
-        "esnext",
-        "middlewares",
-        "nocheck",
-        "nums",
-        "prettierrc",
-        "stylelintrc",
-        "tnum",
-        "umijs",
-        "umirc",
-        "yarnpkg"
-    ]
+  "cSpell.words": [
+    "alipayobjects",
+    "antd",
+    "cdnjs",
+    "endregion",
+    "esbuild",
+    "esnext",
+    "middlewares",
+    "mockjs",
+    "nocheck",
+    "nums",
+    "onstatechange",
+    "onupdatefound",
+    "precache",
+    "precached",
+    "precaching",
+    "prettierrc",
+    "stylelintrc",
+    "tnum",
+    "umijs",
+    "umirc",
+    "yarnpkg"
+  ]
 }

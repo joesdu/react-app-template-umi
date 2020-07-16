@@ -5,9 +5,7 @@
     "build": "umi build",
     "postinstall": "umi generate tmp",
     "analyze": "cross-env ANALYZE=1 umi build",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -28,7 +26,6 @@
     "umi": "^3.2.10"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.4",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.2.2",
@@ -41,10 +38,12 @@
     "@umijs/plugin-model": "^2.5.1",
     "@umijs/plugin-request": "^2.4.1",
     "@umijs/preset-ant-design-pro": "^1.2.2",
-    "@umijs/test": "^3.2.10",
     "cross-env": "^7.0.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "yorkie": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=13.5.0"
   }
 }

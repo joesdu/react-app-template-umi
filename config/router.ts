@@ -3,11 +3,19 @@
 import { IRoute } from 'umi';
 
 const Route: Array<IRoute> = [
-  { path: '/', component: '@/pages/home' }
-  //   {
-  //     path: '/login',
-  //     component: './login'
-  //   }
+  {
+    path: '/login',
+    component: './login'
+  },
+  {
+    path: '/',
+    redirect: '/home'
+  },
+  {
+    name: 'Home',
+    path: '/home',
+    component: './home'
+  }
 ];
 
 export default Route;

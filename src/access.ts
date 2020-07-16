@@ -8,7 +8,7 @@ const access = (initialState: { access?: any }): AccessState => {
   const { access } = initialState || {};
 
   return {
-    canAdmin: access?.findIndex((x: { menuId: number }) => x.menuId === 1)! > -1
+    canAdmin: access?.findIndex((x: { name: string }) => x.name === 'admin')! > -1
   };
 };
 

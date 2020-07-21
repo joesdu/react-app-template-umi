@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
-    "antd": "^4.4.2",
+    "antd": "^4.4.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "umi": "^3.2.10"

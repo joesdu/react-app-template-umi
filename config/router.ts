@@ -15,6 +15,11 @@ const Route: Array<IRoute> = [
     name: 'Home',
     path: '/home',
     component: './home'
+  },
+  {
+    name: 'Test',
+    path: '/test',
+    component: './test'
   }
 ];
 

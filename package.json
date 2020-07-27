@@ -38,10 +38,10 @@
     "@umijs/plugin-model": "^2.5.1",
     "@umijs/plugin-request": "^2.4.1",
     "@umijs/preset-ant-design-pro": "^1.2.2",
+    "@umijs/yorkie": "^2.0.5",
     "cross-env": "^7.0.2",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "yorkie": "^2.0.0"
+    "prettier": "^2.0.5"
   },
   "engines": {
     "node": ">=13.5.0"

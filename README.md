@@ -33,3 +33,9 @@ yarn build
 ```bash
 yarn postinstall
 ```
+
+更新依赖包
+
+```bash
+yarn upgrade-interactive
+```

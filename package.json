@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
-    "antd": "^4.4.3",
+    "antd": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "umi": "^3.2.11"
+    "umi": "^3.2.12"
   },
   "devDependencies": {
     "@types/react": "^16.9.43",

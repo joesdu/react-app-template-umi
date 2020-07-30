@@ -28,7 +28,8 @@ const replaceGoto = async () => {
 
 export default (): React.ReactElement => {
   const { refresh } = useModel('@@initialState');
-  const { loading, signIn } = useModel('login');
+  // Todo Mac OS下要写login.login ?
+  const { loading, signIn } = useModel('login.login');
 
   const handleSubmit = async (values: any) => {
     const { username, password } = values;

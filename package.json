@@ -26,7 +26,7 @@
     "umi": "^3.2.14"
   },
   "devDependencies": {
-    "@types/react": "^16.9.45",
+    "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.2.2",
     "@umijs/plugin-access": "^2.3.1",

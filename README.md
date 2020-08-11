@@ -43,5 +43,5 @@ yarn upgrade-interactive
 更新 yarn
 
 ```bash
-yarn set version from sources
+yarn set version berry
 ```

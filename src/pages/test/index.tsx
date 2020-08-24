@@ -5,9 +5,6 @@ import React from 'react';
 import styles from './index.less';
 
 export default (): React.ReactElement => {
-  console.log('http://service-gw.winside.com:8080/uploadFile/webicon/favicon.svg is local img');
-  console.log('http://service-gw.winside.com:8080/uploadFile/webicon/favicon.svg'.test(/\w.(png|jpg|jpeg|svg|webp|gif|bmp)$/i));
-
   return (
     <div>
       <Helmet>

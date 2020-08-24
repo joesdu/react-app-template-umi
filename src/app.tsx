@@ -23,7 +23,7 @@ export const getInitialState = async (): Promise<InitialState> => {
 };
 
 //#region ErrorHandler
-// const codeMessage = (code: number) => {
+// const codeMessage = (code: number): string => {
 //   switch (code) {
 //     case 200:
 //       return '服务器成功返回请求的数据.';

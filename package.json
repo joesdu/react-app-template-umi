@@ -20,28 +20,28 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
-    "antd": "^4.6.0",
+    "antd": "^4.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "umi": "^3.2.16"
   },
   "devDependencies": {
-    "@types/react": "^16.9.46",
+    "@types/react": "^16.9.47",
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.2.2",
     "@umijs/plugin-access": "^2.3.1",
-    "@umijs/plugin-antd": "^0.7.0",
+    "@umijs/plugin-antd": "^0.8.0",
     "@umijs/plugin-esbuild": "^1.0.1",
-    "@umijs/plugin-helmet": "^1.0.2",
+    "@umijs/plugin-helmet": "^1.1.0",
     "@umijs/plugin-initial-state": "^2.2.1",
-    "@umijs/plugin-locale": "^0.9.1",
+    "@umijs/plugin-locale": "^0.10.0",
     "@umijs/plugin-model": "^2.5.3",
-    "@umijs/plugin-request": "^2.4.2",
+    "@umijs/plugin-request": "^2.5.0",
     "@umijs/preset-ant-design-pro": "^1.2.2",
     "@umijs/yorkie": "^2.0.5",
     "cross-env": "^7.0.2",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.0"
   },
   "engines": {
     "node": ">=13.5.0"

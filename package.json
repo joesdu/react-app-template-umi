@@ -26,13 +26,13 @@
     "umi": "^3.2.17"
   },
   "devDependencies": {
-    "@types/react": "^16.9.47",
+    "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.2.2",
     "@umijs/plugin-access": "^2.3.1",
     "@umijs/plugin-antd": "^0.8.0",
     "@umijs/plugin-esbuild": "^1.0.1",
-    "@umijs/plugin-helmet": "^1.1.0",
+    "@umijs/plugin-helmet": "^1.1.1",
     "@umijs/plugin-initial-state": "^2.2.1",
     "@umijs/plugin-locale": "^0.10.1",
     "@umijs/plugin-model": "^2.5.3",

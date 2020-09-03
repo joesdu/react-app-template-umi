@@ -40,7 +40,7 @@
     "@umijs/preset-ant-design-pro": "^1.2.2",
     "@umijs/yorkie": "^2.0.5",
     "cross-env": "^7.0.2",
-    "lint-staged": "^10.2.13",
+    "lint-staged": "^10.3.0",
     "prettier": "^2.1.1"
   },
   "engines": {

@@ -23,7 +23,7 @@
     "antd": "^4.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "umi": "^3.2.19"
+    "umi": "^3.2.20"
   },
   "devDependencies": {
     "@types/react": "^16.9.49",

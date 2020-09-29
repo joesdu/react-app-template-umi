@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
-    "antd": "^4.6.4",
+    "antd": "^4.6.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "umi": "^3.2.20"
+    "umi": "^3.2.22"
   },
   "devDependencies": {
     "@types/react": "^16.9.49",
@@ -35,7 +35,7 @@
     "@umijs/plugin-helmet": "^1.1.1",
     "@umijs/plugin-initial-state": "^2.2.1",
     "@umijs/plugin-locale": "^0.10.2",
-    "@umijs/plugin-model": "^2.5.3",
+    "@umijs/plugin-model": "^2.5.4",
     "@umijs/plugin-request": "^2.5.0",
     "@umijs/preset-ant-design-pro": "^1.2.2",
     "@umijs/yorkie": "^2.0.5",

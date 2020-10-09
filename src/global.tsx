@@ -1,4 +1,6 @@
-if ('serviceWorker' in navigator) {
+const isHttps = document.location.protocol === 'https:';
+
+if ('serviceWorker' in navigator && isHttps) {
   // unregister service worker
   const { serviceWorker } = navigator;
   if (serviceWorker.getRegistrations) {

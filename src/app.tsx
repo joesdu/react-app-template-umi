@@ -1,25 +1,67 @@
+import { BasicLayoutProps, Settings as LayoutSettings } from '@ant-design/pro-layout';
 import { ErrorShowType, RequestConfig, history } from 'umi';
 
 import { BaseUrl } from '@/config';
+import Footer from '@/components/Footer';
+import React from 'react';
+import RightContent from '@/components/RightContent';
 import { UserInfoAPI } from './services/user';
+import defaultSettings from '../config/default';
 
 interface InitialState {
   access?: any;
+  settings?: LayoutSettings;
+  currentUser?: any;
+  fetchUserInfo: () => Promise<any | undefined>;
 }
 
 export const getInitialState = async (): Promise<InitialState> => {
+  const fetchUserInfo = async () => {
+    try {
+      const currentUser = await UserInfoAPI();
+      return currentUser;
+    } catch (error) {
+      history.push('/login');
+    }
+    return undefined;
+  };
   if (history.location.pathname !== '/login') {
     try {
       let response: ApiResponse = await UserInfoAPI();
       const {
         result: { access }
       } = response;
-      return { access: access };
+      return {
+        access: access,
+        fetchUserInfo,
+        currentUser: response,
+        settings: defaultSettings
+      };
     } catch (error) {
       history.push('/login');
       throw error;
     }
-  } else return {};
+  } else
+    return {
+      fetchUserInfo,
+      settings: defaultSettings
+    };
+};
+
+export const layout = ({ initialState }: { initialState: { settings?: LayoutSettings; currentUser?: any } }): BasicLayoutProps => {
+  return {
+    rightContentRender: () => <RightContent />,
+    disableContentMargin: false,
+    footerRender: () => <Footer />,
+    onPageChange: () => {
+      const { currentUser } = initialState;
+      const { location } = history;
+      // 如果没有登录，重定向到 login
+      if (!currentUser && location.pathname !== '/login') history.push('/login');
+    },
+    menuHeaderRender: undefined,
+    ...initialState?.settings
+  };
 };
 
 //#region ErrorHandler

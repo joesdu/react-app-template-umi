@@ -1,4 +1,5 @@
 import Route from './router';
+import defaultSettings from './default';
 import { defineConfig } from 'umi';
 
 export default defineConfig({
@@ -20,11 +21,17 @@ export default defineConfig({
   // },
   forkTSChecker: {},
   ignoreMomentLocale: true,
+  layout: {
+    name: 'Ant Design Pro',
+    locale: true,
+    ...defaultSettings
+  },
   locale: {
     default: 'zh-CN',
     antd: true,
     baseNavigator: true
   },
-  theme: { '@primary-color': '#1DA57A' },
+  targets: { ie: 11 },
+  theme: { 'primary-color': defaultSettings.primaryColor },
   title: 'ReactAppTemplate'
 });

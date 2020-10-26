@@ -1,8 +1,12 @@
 {
   "cSpell.words": [
+    "Sider",
+    "Siderbar",
     "alipayobjects",
     "antd",
+    "anticon",
     "cdnjs",
+    "datetime",
     "endregion",
     "esbuild",
     "esnext",
@@ -16,6 +20,7 @@
     "precached",
     "precaching",
     "prettierrc",
+    "scrollbar",
     "stylelintrc",
     "tnum",
     "umijs",

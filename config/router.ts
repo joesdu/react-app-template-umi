@@ -19,7 +19,8 @@ const Route: Array<IRoute> = [
   {
     name: 'Test',
     path: '/test',
-    component: './test'
+    component: './test',
+    access: 'canTest' // 权限定义返回值的某个 key
   }
 ];
 

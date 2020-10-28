@@ -1,29 +1,17 @@
 import { Button, Card, Form, Input, Modal, message } from 'antd';
-import { Helmet, useModel } from 'umi';
+import { Helmet, history, useModel } from 'umi';
 import { LockOutlined, QuestionCircleOutlined, UserOutlined } from '@ant-design/icons';
 
 import React from 'react';
-import { getPageQuery } from '@/utils/utils';
 import styles from './index.less';
 
 /**
  * 此方法会跳转到 redirect 参数所在的位置
  */
-const replaceGoto = async () => {
-  const urlParams = new URL(window.location.href);
-  const params = getPageQuery();
-  let { redirect } = params as { redirect: string };
-  if (redirect) {
-    const redirectUrlParams = new URL(redirect);
-    if (redirectUrlParams.origin === urlParams.origin) {
-      redirect = redirect.substr(urlParams.origin.length);
-      if (redirect.match(/^\/.*#/)) redirect = redirect.substr(redirect.indexOf('#'));
-    } else {
-      window.location.href = '/';
-      return;
-    }
-  }
-  window.location.href = urlParams.href.split(urlParams.pathname)[0] + (redirect || '/');
+const goto = () => {
+  const { query } = history.location;
+  const { redirect } = query as { redirect: string };
+  window.location.href = redirect || '/';
 };
 
 export default (): React.ReactElement => {
@@ -35,8 +23,9 @@ export default (): React.ReactElement => {
     let args: { username: string; password: string } = { username, password };
     await signIn(args)
       .then(async (result: CallBackResult) => {
-        if (result.state) await refresh().then(replaceGoto);
-        else message.info(result.msg);
+        if (result.state) {
+          await refresh().then(goto);
+        } else message.info(result.msg);
       })
       .catch((reason: any) => message.error(`登陆失败:${reason}`));
   };

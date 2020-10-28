@@ -1,18 +1,6 @@
 import { LoadingOutlined } from '@ant-design/icons';
 import { PaginationProps } from 'antd/lib/pagination';
 import React from 'react';
-import { parse } from 'querystring';
-
-export const getPageQuery = () => {
-  const { href } = window.location;
-  const qsIndex = href.indexOf('?');
-  const sharpIndex = href.indexOf('#');
-  if (qsIndex !== -1) {
-    if (qsIndex > sharpIndex) return parse(href.split('?')[1]);
-    return parse(href.slice(qsIndex + 1, sharpIndex));
-  }
-  return {};
-};
 
 export const getImageInfo = (url: string): Promise<{ width: number; height: number }> =>
   new Promise<{ width: number; height: number }>((resolve, reject) => {

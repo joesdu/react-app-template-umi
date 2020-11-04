@@ -4,6 +4,7 @@ import { IRoute } from 'umi';
 
 const Route: Array<IRoute> = [
   {
+    layout: false,
     path: '/login',
     component: './login'
   },
@@ -12,12 +13,12 @@ const Route: Array<IRoute> = [
     redirect: '/home'
   },
   {
-    name: 'Home',
+    name: 'home',
     path: '/home',
     component: './home'
   },
   {
-    name: 'Test',
+    name: 'test',
     path: '/test',
     component: './test',
     access: 'canTest' // 权限定义返回值的某个 key

@@ -24,6 +24,7 @@ export default (): React.ReactElement => {
     await signIn(args)
       .then(async (result: CallBackResult) => {
         if (result.state) {
+          message.success('🎉 🎉 🎉 登录成功!');
           await refresh().then(goto);
         } else message.info(result.msg);
       })

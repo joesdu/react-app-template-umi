@@ -14,7 +14,7 @@ if ('serviceWorker' in navigator && isHttps) {
     if (sw) sw.unregister();
   });
   // remove all caches
-  if (window.caches && window.caches.keys) {
+  if (window.caches && window.caches.keys()) {
     caches.keys().then((keys: Array<string>) => {
       keys.forEach((key: string) => {
         caches.delete(key);

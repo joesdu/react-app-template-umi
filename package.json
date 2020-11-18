@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
-    "@ant-design/pro-layout": "^6.5.14",
+    "@ant-design/pro-layout": "^6.5.15",
     "antd": "^4.8.4",
     "classnames": "^2.2.6",
     "react": "^17.0.1",

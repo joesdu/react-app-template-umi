@@ -25,7 +25,7 @@
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "umi": "^3.2.27"
+    "umi": "^3.2.28"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",

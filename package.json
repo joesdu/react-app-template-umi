@@ -21,7 +21,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
     "@ant-design/pro-layout": "^6.5.16",
-    "antd": "^4.8.6",
+    "antd": "^4.9.0",
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

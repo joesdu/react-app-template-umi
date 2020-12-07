@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
-    "@ant-design/pro-layout": "^6.5.17",
-    "antd": "^4.9.1",
+    "@ant-design/pro-layout": "^6.5.18",
+    "antd": "^4.9.2",
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

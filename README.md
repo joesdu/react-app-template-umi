@@ -45,3 +45,15 @@ yarn upgrade-interactive
 ```bash
 yarn set version berry
 ```
+
+导入 yarn 更新依赖包插件
+
+```bash
+yarn plugin import interactive-tools
+```
+
+导入 yarn TypeScript 库自动加入插件
+
+```bash
+yarn plugin import typescript
+```

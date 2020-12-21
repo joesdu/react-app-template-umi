@@ -16,10 +16,13 @@ export interface GlobalHeaderRightProps {
  */
 const loginOut = async () => {
   // await outLogin();
-  const { query, pathname } = history.location;
-  const { redirect } = query;
+  // TODO: 解决编译报错,但是不知道是不是改对了.
+  // const { query, pathname } = history.location;
+  const { pathname } = history.location;
+  // const { redirect } = query;
   // Note: There may be security issues, please note
-  if (window.location.pathname !== '/login' && !redirect) {
+  if (window.location.pathname !== '/login') {
+    //  if (window.location.pathname !== '/login' && !redirect) {
     history.replace({
       pathname: '/login',
       search: stringify({

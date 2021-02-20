@@ -8,7 +8,7 @@ import styles from './index.less';
 
 export type SiderTheme = 'light' | 'dark';
 
-const GlobalHeaderRight: React.FC<{}> = () => {
+const GlobalHeaderRight: React.FC = () => {
   const { initialState } = useModel('@@initialState');
 
   if (!initialState || !initialState.settings) {
@@ -27,7 +27,7 @@ const GlobalHeaderRight: React.FC<{}> = () => {
         <span
           className={styles.action}
           onClick={() => {
-            window.location.href = 'https://beta-pro.ant.design/docs/getting-started-cn';
+            window.open('https://beta-pro.ant.design/docs/getting-started-cn');
           }}
         >
           <QuestionCircleOutlined />

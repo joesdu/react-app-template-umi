@@ -22,7 +22,6 @@ export default defineConfig({
   forkTSChecker: {},
   ignoreMomentLocale: true,
   layout: {
-    name: 'Ant Design Pro',
     locale: true,
     ...defaultSettings
   },

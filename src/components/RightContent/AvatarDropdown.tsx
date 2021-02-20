@@ -7,9 +7,9 @@ import HeaderDropdown from '../HeaderDropdown';
 import { stringify } from 'querystring';
 import styles from './index.less';
 
-export interface GlobalHeaderRightProps {
+export type GlobalHeaderRightProps = {
   menu?: boolean;
-}
+};
 
 /**
  * 退出登录，并且将当前的 url 保存
@@ -35,15 +35,18 @@ const loginOut = async () => {
 const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
   const { initialState, setInitialState } = useModel('@@initialState');
 
-  const onMenuClick = useCallback((event: { key: React.Key; keyPath: React.Key[]; item: React.ReactInstance; domEvent: React.MouseEvent<HTMLElement> }) => {
-    const { key } = event;
-    if (key === 'logout' && initialState) {
-      setInitialState({ ...initialState, currentUser: undefined });
-      loginOut();
-      return;
-    }
-    history.push(`/account/${key}`);
-  }, []);
+  const onMenuClick = useCallback(
+    (event: { key: React.Key; keyPath: React.Key[]; item: React.ReactInstance; domEvent: React.MouseEvent<HTMLElement> }) => {
+      const { key } = event;
+      if (key === 'logout' && initialState) {
+        setInitialState({ ...initialState, currentUser: undefined });
+        loginOut();
+        return;
+      }
+      history.push(`/account/${key}`);
+    },
+    [initialState, setInitialState]
+  );
 
   const loading = (
     <span className={`${styles.action} ${styles.account}`}>

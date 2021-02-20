@@ -1,5 +1,4 @@
 import { BasicLayoutProps, Settings as LayoutSettings } from '@ant-design/pro-layout';
-import { ErrorShowType, history } from 'umi';
 
 import { BaseUrl } from '@/config';
 import Footer from '@/components/Footer';
@@ -8,6 +7,7 @@ import type { RequestConfig } from 'umi';
 import type { ResponseError } from 'umi-request';
 import RightContent from '@/components/RightContent';
 import { UserInfoAPI } from './services/user';
+import { history } from 'umi';
 import logo from '@/assets/logo.svg';
 import { notification } from 'antd';
 
@@ -131,15 +131,15 @@ const errorHandler = (error: ResponseError) => {
 export const request: RequestConfig = {
   // API 符合规范则使用errorHandler，不规范使用errorConfig
   errorHandler: errorHandler,
-  errorConfig: {
-    adaptor: (res: any) => ({
-      data: res.result,
-      success: res.code === 1000,
-      errorMessage: res.message || res.msg,
-      errorCode: res.code,
-      showType: ErrorShowType.NOTIFICATION
-    })
-  },
+  // errorConfig: {
+  //   adaptor: (res: any) => ({
+  //     data: res.result,
+  //     success: res.code === 1000,
+  //     errorMessage: res.message || res.msg,
+  //     errorCode: res.code,
+  //     showType: ErrorShowType.NOTIFICATION
+  //   })
+  // },
   prefix: BaseUrl,
   // method: 'POST',
   // requestType: 'form',

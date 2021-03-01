@@ -1,6 +1,5 @@
 import { LoadingOutlined } from '@ant-design/icons';
 import { PaginationProps } from 'antd/lib/pagination';
-import React from 'react';
 
 export const getImageInfo = (url: string): Promise<{ width: number; height: number }> =>
   new Promise<{ width: number; height: number }>((resolve, reject) => {

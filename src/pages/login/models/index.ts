@@ -11,7 +11,7 @@ export default function useLoginModel() {
     try {
       setLoading(true);
       let response: ApiResponse = await LoginAPI(payload).finally(() => setLoading(false));
-      if (!!response && response.code === 1000) {
+      if (!!response && response.code === 200) {
         return { state: true, msg: response.msg };
       } else return { state: false, msg: response.msg };
     } catch (error) {

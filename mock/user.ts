@@ -5,7 +5,7 @@ export default {
     const { password, username, type } = req.body;
     if (password === '123' && username === 'admin') {
       res.send({
-        code: 1000,
+        code: 200,
         msg: '成功',
         type
       });
@@ -26,7 +26,7 @@ export default {
     });
   },
   'GET /api/user/info': {
-    code: 1000,
+    code: 200,
     msg: '获取成功',
     result: {
       name: 'Admin',

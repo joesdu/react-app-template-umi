@@ -1,9 +1,9 @@
-import { BasicLayoutProps, Settings as LayoutSettings } from '@ant-design/pro-layout';
+import type { RequestConfig, RunTimeLayoutConfig } from 'umi';
 
 import { BaseUrl } from '@/config';
 import Footer from '@/components/Footer';
+import { Settings as LayoutSettings } from '@ant-design/pro-layout';
 import PageLoading from './components/PageLoading';
-import type { RequestConfig } from 'umi';
 import type { ResponseError } from 'umi-request';
 import RightContent from '@/components/RightContent';
 import { UserInfoAPI } from './services/user';
@@ -23,8 +23,11 @@ interface InitialState {
   fetchUserInfo: () => Promise<any | undefined>;
 }
 
+/**
+ * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
+ * */
 export const getInitialState = async (): Promise<InitialState> => {
-  const fetchUserInfo = async () => {
+  const fetchUserInfo = async (): Promise<ApiResponse | undefined> => {
     try {
       const currentUser = await UserInfoAPI();
       return currentUser;
@@ -35,10 +38,8 @@ export const getInitialState = async (): Promise<InitialState> => {
   };
   if (history.location.pathname !== '/login') {
     try {
-      let response: ApiResponse = await UserInfoAPI();
-      const {
-        result: { access }
-      } = response;
+      let response: ApiResponse | undefined = await fetchUserInfo();
+      const { access } = response?.result;
       return {
         access,
         fetchUserInfo,
@@ -56,17 +57,23 @@ export const getInitialState = async (): Promise<InitialState> => {
     };
 };
 
-export const layout = ({ initialState }: { initialState: { settings?: LayoutSettings; currentUser?: any } }): BasicLayoutProps => {
+// https://umijs.org/zh-CN/plugins/plugin-layout
+export const layout: RunTimeLayoutConfig = ({ initialState }) => {
   return {
     logo,
     rightContentRender: () => <RightContent />,
     disableContentMargin: false,
     footerRender: () => <Footer />,
     onPageChange: () => {
-      const { currentUser } = initialState;
       const { location } = history;
       // 如果没有登录，重定向到 login
-      if (!currentUser && location.pathname !== '/login') history.push('/login');
+      if (!initialState?.currentUser && location.pathname !== '/login') {
+        history.push('/login');
+      }
+    },
+    // 水印相关设置
+    waterMarkProps: {
+      content: initialState?.currentUser?.name
     },
     menuHeaderRender: undefined,
     ...initialState?.settings

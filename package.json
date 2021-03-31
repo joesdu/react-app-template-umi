@@ -20,12 +20,12 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "@ant-design/pro-layout": "^6.15.4",
-    "antd": "^4.14.1",
+    "@ant-design/pro-layout": "^6.15.5",
+    "antd": "^4.15.0",
     "classnames": "^2.2.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "umi": "3.4.6"
+    "umi": "3.4.7"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",
@@ -35,8 +35,8 @@
     "@umijs/fabric": "^2.5.7",
     "@umijs/plugin-access": "^2.3.3",
     "@umijs/plugin-antd": "^0.9.1",
-    "@umijs/plugin-esbuild": "^1.1.0",
-    "@umijs/plugin-helmet": "^1.1.1",
+    "@umijs/plugin-esbuild": "^1.1.1",
+    "@umijs/plugin-helmet": "^1.1.2",
     "@umijs/plugin-initial-state": "^2.3.0",
     "@umijs/plugin-layout": "^0.14.1",
     "@umijs/plugin-locale": "^0.10.10",

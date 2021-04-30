@@ -19,6 +19,7 @@ export default defineConfig({
   // history: {
   //   type: 'hash'
   // },
+  fastRefresh: {},
   forkTSChecker: {},
   ignoreMomentLocale: true,
   layout: {

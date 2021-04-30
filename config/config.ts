@@ -3,10 +3,6 @@ import defaultSettings from './default';
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  routes: Route,
-  nodeModulesTransform: {
-    type: 'none'
-  },
   antd: {
     dark: false
   },
@@ -15,12 +11,12 @@ export default defineConfig({
   },
   esbuild: {},
   favicon: './favicon.ico',
+  fastRefresh: {},
+  forkTSChecker: {},
   hash: true,
   // history: {
   //   type: 'hash'
   // },
-  fastRefresh: {},
-  forkTSChecker: {},
   ignoreMomentLocale: true,
   layout: {
     locale: true,
@@ -31,6 +27,10 @@ export default defineConfig({
     antd: true,
     baseNavigator: true
   },
+  nodeModulesTransform: {
+    type: 'none'
+  },
+  routes: Route,
   targets: { ie: 11 },
   theme: { 'primary-color': defaultSettings.primaryColor },
   title: 'ReactAppTemplate'

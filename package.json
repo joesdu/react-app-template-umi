@@ -20,12 +20,12 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "@ant-design/pro-layout": "^6.17.1",
+    "@ant-design/pro-layout": "^6.18.0",
     "antd": "^4.15.5",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "umi": "3.4.19"
+    "umi": "3.4.20"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",

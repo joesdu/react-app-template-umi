@@ -27,11 +27,13 @@ export default defineConfig({
     antd: true,
     baseNavigator: true
   },
+  mfsu: {},
   nodeModulesTransform: {
     type: 'none'
   },
   routes: Route,
   targets: { ie: 11 },
   theme: { 'primary-color': defaultSettings.primaryColor },
-  title: 'ReactAppTemplate'
+  title: 'ReactAppTemplate',
+  webpack5: {}
 });
